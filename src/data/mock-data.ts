@@ -488,7 +488,7 @@ export const mockData: MockData = {
             { time: '04-05 08:30', event: '小红书首篇"避雷帖"发布', type: 'detect' },
             { time: '04-05 10:00', event: '微博出现跟帖讨论，热度上升', type: 'update' },
             { time: '04-05 12:00', event: '累计相关内容超50条，触发P1预警', type: 'alert' },
-            { time: '04-05 14:05', action: '市场部评估是否需要价格调整', type: 'respond' },
+            { time: '04-05 14:05', event: '市场部评估是否需要价格调整', type: 'respond' },
           ],
           platformDistribution: [
             { name: '小红书', value: 55, color: '#ff2442' },
@@ -758,7 +758,7 @@ export const mockData: MockData = {
             { time: '04-03 10:00', event: '知乎提问发布', type: 'detect' },
             { time: '04-04 14:00', event: '回答数突破50条，标记关注', type: 'update' },
             { time: '04-05 09:00', event: '小红书宝妈群体加入讨论，热度上升', type: 'update' },
-            { time: '04-05 13:55', action: '品牌公关评估是否需要官方回应', type: 'respond' },
+            { time: '04-05 13:55', event: '品牌公关评估是否需要官方回应', type: 'respond' },
           ],
           platformDistribution: [
             { name: '知乎', value: 50, color: '#0084ff' },
@@ -787,7 +787,7 @@ export const mockData: MockData = {
           timeline: [
             { time: '04-04 09:00', event: '首篇"太甜"相关帖子出现', type: 'detect' },
             { time: '04-05 08:00', event: '多篇同类型帖子出现，标记关注', type: 'update' },
-            { time: '04-05 13:40', action: '产品研发部门评估减糖方案可行性', type: 'respond' },
+            { time: '04-05 13:40', event: '产品研发部门评估减糖方案可行性', type: 'respond' },
           ],
           platformDistribution: [
             { name: '小红书', value: 70, color: '#ff2442' },
@@ -815,7 +815,7 @@ export const mockData: MockData = {
           timeline: [
             { time: '04-05 10:00', event: '系统检测到京东渠道正面指标上升', type: 'detect' },
             { time: '04-05 12:00', event: '确认好评率突破98%，标记为正面素材', type: 'update' },
-            { time: '04-05 13:05', action: '素材入库，关闭归档', type: 'resolve' },
+            { time: '04-05 13:05', event: '素材入库，关闭归档', type: 'resolve' },
           ],
           platformDistribution: [
             { name: '电商平台', value: 95, color: '#f97316' },

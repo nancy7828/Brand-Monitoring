@@ -10,6 +10,7 @@ const platformIcon: Record<Platform, string> = {
   dianping: '⭐',
   meituan: '🛒',
   zhihu: '💬',
+  bilibili: '📺',
   news: '📰',
   other: '🌐',
 }
