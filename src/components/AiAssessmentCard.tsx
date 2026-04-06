@@ -6,7 +6,7 @@ interface AiAssessment {
   riskScore: number;
   keyFindings: string[];
   suggestedActions: string[];
-  nextWatch: string[];
+  prediction?: string;
 }
 
 interface Props {

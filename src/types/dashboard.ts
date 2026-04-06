@@ -1,7 +1,7 @@
 export type RiskLevel = 'P0' | 'P1' | 'P2' | 'P3'
 export type EventStatus = '待研判' | '已告警' | '处理中' | '已关闭'
 export type ScenarioType = 'chain' | 'beverage' | 'packaged_food'
-export type Platform = 'weibo' | 'douyin' | 'xiaohongshu' | 'dianping' | 'meituan' | 'zhihu' | 'news' | 'other'
+export type Platform = 'weibo' | 'douyin' | 'xiaohongshu' | 'dianping' | 'meituan' | 'zhihu' | 'bilibili' | 'news' | 'other'
 
 export interface SummaryMetrics {
   newMentionsToday: number
@@ -65,6 +65,7 @@ export interface TimelineEntry {
   time: string
   event: string
   type: 'detect' | 'alert' | 'respond' | 'update' | 'resolve'
+  action?: string
 }
 
 export interface EventDetail {

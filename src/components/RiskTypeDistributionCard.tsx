@@ -22,7 +22,7 @@ export default function RiskTypeDistributionCard({ data }: Props) {
           />
           <Bar dataKey="value" radius={[4, 4, 2, 2]} barSize={24}>
             {data.map((entry, index) => (
-              <Cell key={`bar-${index}`} fill={COLORS[index % COLORS.length]} rx={[4]} />
+              <Cell key={`bar-${index}`} fill={COLORS[index % COLORS.length]} rx={4} />
             ))}
           </Bar>
         </BarChart>
