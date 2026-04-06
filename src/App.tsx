@@ -60,17 +60,17 @@ function App() {
           </div>
         </div>
 
-        <div className="grid grid-cols-12 gap-4">
-          <div className="col-span-5 space-y-4">
-            <KeywordCloudCard keywords={data.keywordCloud} />
-            <ResonanceCommentsCard comments={data.resonanceComments} />
-          </div>
-          <div className="col-span-7 space-y-4">
-            <RankingCard items={data.rankingList} />
-            <AiAssessmentCard assessment={data.aiAssessment} />
-          </div>
-        </div>
-      </main>
+       <div className="grid grid-cols-12 gap-4">
+  <div className="col-span-5 space-y-4">
+    <KeywordCloudCard keywords={data.keywordCloud} />
+    <ResonanceCommentsCard data={data.resonanceComments} />
+  </div>
+  <div className="col-span-7 space-y-4">
+    <RankingCard data={data.rankingList} />
+    <AiAssessmentCard assessment={data.aiAssessment} />
+  </div>
+</div>
+</main>
 
       {selectedEventId && data.detailByEventId[selectedEventId] && (
         <EventDetailDrawer
