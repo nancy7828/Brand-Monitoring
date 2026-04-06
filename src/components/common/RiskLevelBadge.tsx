@@ -1,19 +1,22 @@
 import type { RiskLevel } from '../../types/dashboard'
 
-const levelConfig: Record<RiskLevel, { label: string; bg: string; text: string; dot: string }> = {
+type BadgeLevel = RiskLevel | 'normal'
+
+const levelConfig: Record<BadgeLevel, { label: string; bg: string; text: string; dot: string }> = {
   P0: { label: 'P0', bg: 'bg-red-50', text: 'text-red-700', dot: 'bg-red-600' },
   P1: { label: 'P1', bg: 'bg-orange-50', text: 'text-orange-700', dot: 'bg-orange-500' },
   P2: { label: 'P2', bg: 'bg-amber-50', text: 'text-amber-700', dot: 'bg-amber-500' },
   P3: { label: 'P3', bg: 'bg-slate-100', text: 'text-slate-600', dot: 'bg-slate-400' },
+  normal: { label: '正常', bg: 'bg-emerald-50', text: 'text-emerald-700', dot: 'bg-emerald-500' },
 }
 
 interface Props {
-  level: RiskLevel
+  level: BadgeLevel
   size?: 'sm' | 'md'
 }
 
 export default function RiskLevelBadge({ level, size = 'md' }: Props) {
-  const config = levelConfig[level]
+  const config = levelConfig[level as BadgeLevel] || levelConfig.normal
   if (size === 'sm') {
     return (
       <span className={`inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-xs font-medium ${config.bg} ${config.text}`}>
