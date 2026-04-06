@@ -67,7 +67,7 @@ function App() {
   </div>
   <div className="col-span-7 space-y-4">
     <RankingCard data={data.rankingList} />
-    <AiAssessmentCard assessment={data.aiAssessment} />
+    <AiAssessmentCard data={data.aiAssessment} />
   </div>
 </div>
 </main>
